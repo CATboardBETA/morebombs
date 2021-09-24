@@ -79,14 +79,16 @@ public class ExplosionFactory {
     private Set<BlockPos> toBlow() {
         Set<BlockPos> blocksToBlow = Sets.newHashSet();
 
-        for (int i = x - radius; i <= x + radius; ++i) {
-            for (int j = y - radius; j <= y + radius; ++j) {
-                for (int k = z - radius; k <= z + radius; ++k) {
+        int r = this.getRadius();
+
+        for (int i = x - r; i <= x + r; ++i) {
+            for (int j = y - r; j <= y + r; ++j) {
+                for (int k = z - r; k <= z + r; ++k) {
 
                     BlockPos pos = this.getEntity().getEntity().blockPosition();
                     BlockPos block = pos.offset(i, j, k);
 
-                    if (!isDistanceTooMuch(pos, block, radius)) {
+                    if (!isDistanceTooMuch(pos, block, r)) {
                         blocksToBlow.add(block);
                     }
                 }
