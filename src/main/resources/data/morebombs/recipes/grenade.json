@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "CMC",
+        " C "
+    ],
+    "key": {
+        "#": {
+            "item": "morebombs:grenade_pin"
+        },
+        "C": {
+            "item": "minecraft:clay_ball"
+        },
+        "M": {
+            "item": "morebombs:explosive_core"
+        }
+    },
+    "result": {
+        "item": "morebombs:grenade",
+        "count": 1
+    }
+}

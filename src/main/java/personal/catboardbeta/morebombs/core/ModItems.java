@@ -45,6 +45,7 @@ public class ModItems {
     // crafting
     public static Item EXPLOSIVE_CORE          = createItem(new Item(new Item.Properties().tab(BOMB_TAB)), "explosive_core");
     public static Item EXPLOSIVE_CORE_ELECTRIC = createItem(new Item(new Item.Properties().tab(BOMB_TAB)), "explosive_core_electric");
+    public static Item GRENADE_PIN             = createItem(new Item(new Item.Properties().tab(BOMB_TAB)), "grenade_pin");
 
     public static Item createItem(Item item, String id) {
         return createItem(item, new ResourceLocation(Morebombs.MODID, id));
