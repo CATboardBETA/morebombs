@@ -9,6 +9,7 @@ import personal.catboardbeta.morebombs.Morebombs;
 import personal.catboardbeta.morebombs.common.blocks.LandMine;
 import personal.catboardbeta.morebombs.common.blocks.TNT10x;
 import personal.catboardbeta.morebombs.common.blocks.TNTLightning;
+import personal.catboardbeta.morebombs.common.blocks.TNTPig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class ModBlocks {
             "tnt_lightning");
 
     public static Block LAND_MINE = createBlock(new LandMine(AbstractBlock.Properties.of(Material.STONE).instabreak().sound(SoundType.ANCIENT_DEBRIS)), "land_mine");
+    public static Block PIG_TNT = createBlock(new TNTPig(AbstractBlock.Properties.of(Material.EXPLOSIVE).instabreak().sound(SoundType.GRASS)), "pig_tnt");
 
     public static Block createBlock(Block block, String id) {
         block.setRegistryName(new ResourceLocation(Morebombs.MODID, id));

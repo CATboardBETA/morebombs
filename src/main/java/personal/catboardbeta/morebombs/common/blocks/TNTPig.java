@@ -39,15 +39,14 @@ public class TNTPig extends Block {
             return super.use(state, world, blockPos, player, hand, result);
         } else {
             this.owner = player;
-            LightningBoltEntity lbe = new LightningBoltEntity(EntityType.LIGHTNING_BOLT, world);
-
-
-
-            world.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 11);
+            PigEntity pig = new PigEntity(EntityType.PIG, world);
+            pig.setPos(blockPos.getX(), blockPos.getY(), blockPos.getZ());
+            world.addFreshEntity(pig);
+            world.setBlock(blockPos, Blocks.AIR.defaultBlockState(), 1);
             if (!player.isCreative()) {
                 if (item == Items.FLINT_AND_STEEL) {
-                    itemstack.hurtAndBreak(1, player, (p_220287_1_) -> {
-                        p_220287_1_.broadcastBreakEvent(hand);
+                    itemstack.hurtAndBreak(1, player, (items) -> {
+                        items.broadcastBreakEvent(hand);
                     });
                 } else {
                     itemstack.shrink(1);
