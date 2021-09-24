@@ -52,12 +52,12 @@ public class ExplosionFactory {
                 switch (this.type) {
                     case CLEAR:
                         LOGGER.info("Is Case Clear");
-                        world.destroyBlock(block, true, this.getEntity());
+                        world.setBlock(block, Blocks.AIR.defaultBlockState(), 1);
                         break;
 
                     case BREAK:
                         LOGGER.info("Is Case Break");
-                        world.destroyBlock(block, true, this.getEntity());
+                        world.setBlock(block, Blocks.AIR.defaultBlockState(), 1);
                         BlockState bs = world.getBlockState(block);
                         List<ItemStack> blockDrops = new ArrayList<>();
                         blockDrops.add(bs.getBlock().asItem().getDefaultInstance());

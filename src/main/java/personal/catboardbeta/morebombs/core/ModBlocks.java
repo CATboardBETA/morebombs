@@ -6,6 +6,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
 import personal.catboardbeta.morebombs.Morebombs;
+import personal.catboardbeta.morebombs.common.blocks.LandMine;
 import personal.catboardbeta.morebombs.common.blocks.TNT10x;
 import personal.catboardbeta.morebombs.common.blocks.TNTLightning;
 
@@ -23,12 +24,14 @@ public class ModBlocks {
                      .sound(SoundType.GRASS)),
             "tnt_10x");
 
-    public static Block TNTLightning = createBlock(new TNTLightning(
+    public static Block TNT_LIGHTNING = createBlock(new TNTLightning(
             AbstractBlock.Properties.of(
                     Material.EXPLOSIVE)
                     .instabreak()
                     .sound(SoundType.GRASS)),
             "tnt_lightning");
+
+    public static Block LAND_MINE = createBlock(new LandMine(AbstractBlock.Properties.of(Material.STONE).instabreak().sound(SoundType.ANCIENT_DEBRIS)), "land_mine");
 
     public static Block createBlock(Block block, String id) {
         block.setRegistryName(new ResourceLocation(Morebombs.MODID, id));
