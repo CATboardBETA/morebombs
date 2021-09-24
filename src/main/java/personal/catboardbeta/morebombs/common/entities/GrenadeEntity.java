@@ -7,6 +7,7 @@ import net.minecraft.entity.monster.BlazeEntity;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.IPacket;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ItemParticleData;
 import net.minecraft.particles.ParticleTypes;
@@ -17,6 +18,7 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.network.NetworkHooks;
 import personal.catboardbeta.morebombs.core.ModEntities;
 import personal.catboardbeta.morebombs.core.ModItems;
 
@@ -53,7 +55,10 @@ public class GrenadeEntity extends ProjectileItemEntity {
         }
     }
 
-
+    @Override
+    public IPacket<?> getAddEntityPacket() {
+        return NetworkHooks.getEntitySpawningPacket(this);
+    }
 
     protected void onHitEntity(EntityRayTraceResult result) {
         super.onHitEntity(result);
@@ -68,5 +73,3 @@ public class GrenadeEntity extends ProjectileItemEntity {
             this.remove();
         }
     }
-
-
