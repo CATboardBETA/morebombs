@@ -15,7 +15,7 @@ public class ModBlocks {
 
     public static List<Block> blocks = new ArrayList<>();
 
-    public static Block Fuse = createBlock(new Fuse(
+    public static Block FUSE = createBlock(new Fuse(
             AbstractBlock.Properties.of(
                     Material.EXPLOSIVE)
                     .instabreak()
