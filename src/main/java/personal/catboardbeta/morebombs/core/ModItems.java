@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+
 import net.minecraft.util.registry.Registry;
 import personal.catboardbeta.morebombs.Morebombs;
 import personal.catboardbeta.morebombs.common.items.GrenadeItem;
