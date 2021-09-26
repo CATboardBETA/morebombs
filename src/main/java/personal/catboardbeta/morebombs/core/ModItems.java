@@ -34,10 +34,10 @@ public class ModItems {
     public static List<Item> items = new ArrayList<>();
 
     // blocks
-    public static Item TNT10x      = createItem(new BlockItem(ModBlocks.TNT10X,       new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.TNT10X));
+    public static Item TNT10x        = createItem(new BlockItem(ModBlocks.TNT10X,        new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.TNT10X));
     public static Item TNT_LIGHTNING = createItem(new BlockItem(ModBlocks.TNT_LIGHTNING, new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.TNT_LIGHTNING));
-    public static Item LAND_MINE = createItem(new BlockItem(ModBlocks.LAND_MINE, new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.LAND_MINE));
-    public static Item PIG_TNT = createItem(new BlockItem(ModBlocks.PIG_TNT, new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.PIG_TNT));
+    public static Item LAND_MINE     = createItem(new BlockItem(ModBlocks.LAND_MINE,     new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.LAND_MINE));
+    public static Item PIG_TNT       = createItem(new BlockItem(ModBlocks.PIG_TNT,       new Item.Properties().tab(BOMB_TAB)), Registry.BLOCK.getKey(ModBlocks.PIG_TNT));
 
     // grenades
     public static Item GRENADE = createItem(new GrenadeItem(new Item.Properties().tab(BOMB_TAB)), "grenade");

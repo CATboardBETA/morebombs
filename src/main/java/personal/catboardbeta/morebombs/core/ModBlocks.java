@@ -6,10 +6,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
 import personal.catboardbeta.morebombs.Morebombs;
-import personal.catboardbeta.morebombs.common.blocks.LandMine;
-import personal.catboardbeta.morebombs.common.blocks.TNT10x;
-import personal.catboardbeta.morebombs.common.blocks.TNTLightning;
-import personal.catboardbeta.morebombs.common.blocks.TNTPig;
+import personal.catboardbeta.morebombs.common.blocks.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +14,13 @@ import java.util.List;
 public class ModBlocks {
 
     public static List<Block> blocks = new ArrayList<>();
+
+    public static Block Fuse = createBlock(new Fuse(
+            AbstractBlock.Properties.of(
+                    Material.EXPLOSIVE)
+                    .instabreak()
+                    .sound(SoundType.GRASS)),
+            "fuse");
 
     public static Block TNT10X = createBlock(new TNT10x(
              AbstractBlock.Properties.of(
